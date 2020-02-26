@@ -1,0 +1,58 @@
+@import '../styles/main.scss';
+
+@each $name, $value in $colors {
+  .color#{$name} {
+    background: $value;
+  }
+} 
+
+@each $name, $value in $colors {
+  .font#{$name} {
+    color: $value;
+  }
+} 
+
+@include for-phones {
+  .zoom {
+    zoom: 0.4;
+    -moz-transform: scale(0.4); 
+    -moz-transform-origin: 0 0;
+  }
+}
+
+
+@include for-tablets {
+  .zoom {
+    zoom: 0.7;
+    -moz-transform: scale(0.7); 
+    -moz-transform-origin: 0 0;
+  }
+}
+
+$stroke: #000;
+$stroke-value: calc(1em / 64);
+$stroke-value-negative: calc(-1em / 64);
+$shadow-value: calc(1em / 21);
+
+@each $name, $value in $colors {
+  $shadow: $value;
+
+  .heading#{$name} {
+    font-family: "Fira Code", monospace;
+    margin: 0.25em 0;
+    box-sizing: border-box;
+    font-weight: 800;
+
+    &.strokeShadowTransparent {
+      -webkit-text-stroke: $stroke-value $stroke;
+      -moz-text-stroke-width: $stroke-value;
+      -moz-text-stroke-color: $stroke;
+      color: transparent;
+      text-shadow: $shadow-value $shadow-value $shadow;
+    }
+
+    &.strokeShadow {
+      text-shadow: $stroke-value-negative 0 , 0 $stroke-value-negative $stroke, $stroke-value 0 $stroke, 0 $stroke-value $stroke, $stroke-value $stroke-value $stroke, $stroke-value-negative $stroke-value-negative $stroke, $stroke-value-negative $stroke-value $stroke, $stroke-value $stroke-value-negative $stroke, $shadow-value $shadow-value $shadow;
+    }
+  }
+} 

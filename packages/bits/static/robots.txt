@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://www.crocoder.dev/sitemap.xml

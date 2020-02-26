@@ -1,0 +1,25 @@
+@import './desktop.module.scss';
+@import './tablet.module.scss';
+@import './mobile.module.scss';
+
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.image {
+  flex-basis: 100%
+}
+
+.title {
+  flex-basis: 100%;
+  text-align: center
+}
+
+.subtitle {
+  flex-basis: 100%;
+  text-align: center
+}

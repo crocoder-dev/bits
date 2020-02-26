@@ -1,0 +1,18 @@
+@import '../../styles/main.scss';
+
+
+@include for-tablets {
+  .wrapper {
+    align-items: center;
+    padding: $base__padding--tablet $base__padding--tablet/2 6*$base__padding--tablet $base__padding--tablet/2;
+    justify-content: flex-end;
+  }
+
+  .wrapper__buttons {  
+    button {
+      margin-top: 20px;
+    }
+  }
+
+
+}

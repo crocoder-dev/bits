@@ -1,0 +1,209 @@
+@import './styles/main.scss';
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  line-height: 1;
+  font-size: 1.6rem;
+  color: #000;
+  background-color: #fff;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-font-feature-settings: "pnum";
+  font-feature-settings: "pnum";
+  font-variant-numeric: proportional-nums;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+pre {
+  display: block;
+  padding: 2rem;
+  margin-top: 4rem;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+video {
+  max-width: 100%;
+}
+
+p {
+  margin-bottom: 2rem;
+}
+
+.MuiFormControl-root .MuiFormHelperText-root {
+  font-size: 0.75em;
+}
+
+
+.MuiFormControl-root.MuiTextField-root .MuiInput-underline:after, .MuiInput-underline:after {
+  border-bottom-color: $green_2 !important;
+}
+.MuiFormControl-root.MuiTextField-root .MuiFormLabel-root.Mui-focused, .MuiFormLabel-root.Mui-focused {
+  color: $green_2 !important;
+}
+
+
+.MuiFormControl-root.MuiTextField-root .Mui-error:after {
+  border-bottom-color: $red_2 !important;
+}
+
+input:-internal-autofill-selected {
+  background-color: rgba(151, 181, 52, 0.5) !important;
+  background-image: none !important;
+  color: -internal-light-dark-color(black, white) !important;
+}
+
+.MuiList-root.MuiMenu-list.MuiList-padding li{
+  font-size: 0.9em;
+}
+
+.MuiListItem-root.Mui-selected, .MuiListItem-root.Mui-selected:hover {
+  background-color: rgba(151, 181, 52, 0.7) !important;
+}
+.MuiListItem-button:hover {
+  background-color: rgba(151, 181, 52, 0.3) !important;
+}
+
+.MuiFormControl-marginNormal {
+  margin: 10px 0 !important;
+}
+
+.MuiInput-underline.Mui-error:after {
+  border-bottom-color: $red_2 !important;
+}

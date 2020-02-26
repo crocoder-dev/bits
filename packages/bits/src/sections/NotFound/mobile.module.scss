@@ -1,0 +1,15 @@
+@import '../../styles/main.scss';
+
+@include for-phones {
+  .wrapper {
+    padding: $section__padding--mobile 0 5*$section__padding--mobile 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .wrapper__buttons {  
+    button {
+      margin-top: 30px;
+    }
+  }
+}

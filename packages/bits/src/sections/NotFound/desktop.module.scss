@@ -1,0 +1,16 @@
+@import '../../styles/main.scss';
+
+@include for-desktop {
+  .wrapper {
+    align-items: center;
+    padding: 0 4*$base__padding--desktop 2*$base__padding--desktop 4*$base__padding--desktop;
+    justify-content: flex-end;
+  }
+
+  .wrapper__buttons {  
+    button {
+      margin-top: 20px;
+    }
+  }
+
+}

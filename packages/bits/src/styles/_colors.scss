@@ -1,0 +1,130 @@
+/**
+  CroCoder color definitions from Figma.
+  The values are grouped by color, sorted and named based
+  on position in the list of same color values.
+*/
+$black: #000; //Don't use for blog header
+
+$blue_1: #2985DF; //Don't use for blog header
+$blue_2: #3D4EDE; //Light 6.28:1
+$blue_3: #47BBE0; //Dark 5.14:1
+$blue_4: #4E25A3; //Light 9.91:1
+$blue_5: #5362DB; //Light 5.07:1
+$blue_6: #F6FCFD; //Dark 11.01:1
+
+$gray_1: #3C3843; //Light 11.42:1
+$gray_2: #424C6D; //Light 8.44:1
+$gray_3: #545664; //Light 7.26:1
+$gray_4: #A3A7B4; //Don't use for blog header
+$gray_5: #E8E8E8; //Dark 9.32:1
+$gray_6: #7D8397; //Don't use for blog header
+
+$green_1: #539500; //Don't use for blog header
+$green_2: #67A807; //Don't use for blog header
+$green_3: #72911F; //Don't use for blog header
+$green_4: #85A32A; //Don't use for blog header
+$green_5: #98B534; //Dark 4.89:1
+
+$orange_1: #FF8C17; //Dark 4.9:1
+$orange_2: #FFB183; //Dark 6.45:1
+$orange_3: #FFCFAC; //Dark 8.03:1
+$orange_4: #FFA716; //Dark 5.86:1
+
+$red_1: #8E4A51; //Light 6.46:1
+$red_2: #C97771; //Don't use for blog header
+$red_3: #E17871; //Don't use for blog header
+$red_4: #FB2A2A; //Don't use for blog header
+$red_5: #FB5D2A; //Don't use for blog header
+
+$white: #FFF; //Don't use for blog header
+
+$yellow_1: #FEB534; //Dark 6.45:1
+$yellow_2: #FEC343; //Dark 7.12:1
+$yellow_3: #FED152; //Dark 7.86:1
+$yellow_4: #FFB817; //Dark 6.59:1
+$yellow_5: #FFCA36; //Dark 7.47:1
+
+
+/** Color map based on previously defined variables. **/
+
+$colors: (
+  "black": $black,
+  "blue_1": $blue_1,
+  "blue_2": $blue_2,
+  "blue_3": $blue_3,
+  "blue_4": $blue_4,
+  "blue_5": $blue_5,
+  "blue_6": $blue_6,
+  "gray_1": $gray_1,
+  "gray_2": $gray_2,
+  "gray_3": $gray_3,
+  "gray_4": $gray_4,
+  "gray_5": $gray_5,
+  "gray_6": $gray_6,
+  "green_1": $green_1,
+  "green_2": $green_2,
+  "green_3": $green_3,
+  "green_4": $green_4,
+  "green_5": $green_5,
+  "orange_1": $orange_1,
+  "orange_2": $orange_2,
+  "orange_3": $orange_3,
+  "orange_4": $orange_4,
+  "red_1": $red_1,
+  "red_2": $red_2,
+  "red_3": $red_3,
+  "red_4": $red_4,
+  "red_5": $red_5,
+  "white": $white,
+  "yellow_1": $yellow_1,
+  "yellow_2": $yellow_2,
+  "yellow_3": $yellow_3,
+  "yellow_4": $yellow_4,
+  "yellow_5": $yellow_5,
+);
+
+$blog_colors: (
+  "blue_2": $blue_2,
+  "blue_3": $blue_3,
+  "blue_4": $blue_4,
+  "blue_5": $blue_5,
+  "blue_6": $blue_6,
+  "gray_1": $gray_1,
+  "gray_2": $gray_2,
+  "gray_3": $gray_3,
+  "gray_5": $gray_5,
+  "green_5": $green_5,
+  "orange_1": $orange_1,
+  "orange_2": $orange_2,
+  "orange_3": $orange_3,
+  "orange_4": $orange_4,
+  "red_1": $red_1,
+  "yellow_1": $yellow_1,
+  "yellow_2": $yellow_2,
+  "yellow_3": $yellow_3,
+  "yellow_4": $yellow_4,
+  "yellow_5": $yellow_5,
+);
+
+$blog_fonts: (
+  "blue_2": $white,
+  "blue_3": $gray_1,
+  "blue_4": $white,
+  "blue_5": $white,
+  "blue_6": $gray_1,
+  "gray_1": $white,
+  "gray_2": $white,
+  "gray_3": $white,
+  "gray_5": $gray_1,
+  "green_5": $gray_1,
+  "orange_1": $gray_1,
+  "orange_2": $gray_1,
+  "orange_3": $gray_1,
+  "orange_4": $gray_1,
+  "red_1": $white,
+  "yellow_1": $gray_1,
+  "yellow_2": $gray_1,
+  "yellow_3": $gray_1,
+  "yellow_4": $gray_1,
+  "yellow_5": $gray_1,
+);

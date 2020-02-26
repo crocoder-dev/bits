@@ -1,0 +1,17 @@
+@import './desktop.module.scss';
+@import './tablet.module.scss';
+@import './mobile.module.scss';
+
+.snippet {
+  width: 100%;
+  position: relative;
+  padding-bottom: 30px;
+
+  .icon {
+    width: 5%;
+    max-width: 48px;
+    position: absolute;
+    bottom: 80px;
+    right: 16px;
+  }
+}
