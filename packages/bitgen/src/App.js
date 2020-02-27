@@ -1,13 +1,12 @@
 import React from 'react';
 import Output from './components/output';
+import Input from './components/input';
 
 const App = () => {
   return (
     <div style={{display: 'flex'}}>
-      <div style={{ height: '100vh', width: '50vw' }}>
-        input
-      </div>
-      <Output />
+      <Input />
+      <Output title="test" background="yellow" signature="@devabram" logo="logo.png" />
     </div>
   );
 }

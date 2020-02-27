@@ -3,7 +3,7 @@ import Logo from '../Logo';
 import Title from '../Title';
 import Snippet from '../Snippet';
 import Signature from '../Signature';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const BitContainer = styled.div`
   height: 1080px;
@@ -12,7 +12,11 @@ const BitContainer = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: red;
+  border: 1px #000 dashed;
+  box-sizing: border-box;
+  ${props => css`
+    background-color: ${props.background || 'red'};
+  `}
 
   @media (min-width: 1920px) and (max-width: 2160px) {
     transform: translate(-5.55%, -5.55%) scale(0.888);
@@ -51,13 +55,13 @@ const BitContainer = styled.div`
   }
 `;
 
-const Bit = () => {
+const Bit = ({ title, signature, background, logo }) => {
   return (
-    <BitContainer>
-      <Logo />
-      <Title />
+    <BitContainer background={background}>
+      <Logo logo={logo} />
+      <Title title={title}/>
       <Snippet />
-      <Signature />
+      <Signature signature={signature} />
     </BitContainer>
   )
 };

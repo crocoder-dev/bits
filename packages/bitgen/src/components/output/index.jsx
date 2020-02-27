@@ -8,11 +8,21 @@ const Wrapper = styled.section`
   max-width: 50vw;
 `;
 
-const Output = () => {
+const Output = ({
+  background,
+  title,
+  signature,
+  logo,
+}) => {
   return (
     <Wrapper>
-      <Background>
-        <Bit />
+      <Background background={background}>
+        <Bit
+          background={background}
+          title={title}
+          signature={signature}
+          logo={logo}
+        />
       </Background>
     </Wrapper>
   )

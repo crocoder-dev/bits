@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Signature = () => {
+const Signature = ({signature}) => {
   return (
     <div>
-      Signature
+      {signature}
     </div>
   )
 };
