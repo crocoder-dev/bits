@@ -46,18 +46,23 @@ const StyledDL = styled.dl`
 `;
 
 
-const InputField = ({ id, label, inputType, onChange, placeholder, value }) => {
-  return (
-    <StyledDL>
-      <StyledDT>
-        <StyledLabel for={id}>{label}</StyledLabel>
-      </StyledDT>
-      <dd>
-        <StyledInput value={value} placeholder={placeholder} id={id} type={inputType} onChange={onChange} />
-      </dd>
-    </StyledDL>
-  );
+const InputField = ({
+  id, label, inputType, onChange, placeholder, value,
+}) => (
+  <StyledDL>
+    <StyledDT>
+      <StyledLabel for={id}>{label}</StyledLabel>
+    </StyledDT>
+    <dd>
+      <StyledInput
+        value={value}
+        placeholder={placeholder}
+        id={id}
+        type={inputType}
+        onChange={onChange}
+      />
+    </dd>
+  </StyledDL>
+);
 
-}
-
-export { InputField };
+export default InputField;

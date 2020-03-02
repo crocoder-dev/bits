@@ -1,5 +1,5 @@
 import React from 'react';
-import { InputField } from '../Input';
+import InputField from '../Input';
 
 const LogoInput = ({ logo, setLogo }) => {
   const getImage = (event) => {

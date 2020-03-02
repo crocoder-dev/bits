@@ -1,9 +1,9 @@
 import React from 'react';
+import styled, { css } from 'styled-components';
 import Logo from '../Logo';
 import Title from '../Title';
 import Snippet from '../Snippet';
 import Signature from '../Signature';
-import styled, { css } from 'styled-components';
 import okaidia from './okaidia';
 
 const BitContainer = styled.div`
@@ -15,7 +15,7 @@ const BitContainer = styled.div`
   flex-direction: column;
   border: 1px #000 dashed;
   box-sizing: border-box;
-  ${props => css`
+  ${(props) => css`
     background-color: ${props.background || 'red'};
   `}
   ${okaidia}
@@ -57,17 +57,15 @@ const BitContainer = styled.div`
   }
 `;
 
-const Bit = ({ title, signature, background, logo, snippet, language, captureRef, titleFontSize, titleColor }) => {
-
-
-  return (
-    <BitContainer ref={captureRef} background={background}>
-      <Logo logo={logo} />
-      <Title title={title} titleFontSize={titleFontSize} titleColor={titleColor}/>
-      <Snippet snippet={snippet} language={language} />
-      <Signature signature={signature} />
-    </BitContainer>
-  )
-};
+const Bit = ({
+  title, signature, background, logo, snippet, language, captureRef, titleFontSize, titleColor,
+}) => (
+  <BitContainer ref={captureRef} background={background}>
+    <Logo logo={logo} />
+    <Title title={title} titleFontSize={titleFontSize} titleColor={titleColor} />
+    <Snippet snippet={snippet} language={language} />
+    <Signature signature={signature} />
+  </BitContainer>
+);
 
 export default Bit;

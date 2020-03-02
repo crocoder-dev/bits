@@ -15,7 +15,7 @@ const Color = styled.div`
   width: 36px;
   height: 14px;
   border-radius: 2px;
-  ${props => css`
+  ${(props) => css`
     background-color: ${props.color};
   `}
 `;
@@ -24,7 +24,7 @@ const Popover = styled.div`
   position: absolute;
   z-index: 2;
 `;
-//bottom: 100%;
+// bottom: 100%;
 const Cover = styled.div`
   position: fixed;
   top: 0px;
@@ -55,8 +55,9 @@ const StyledDD = styled.dd`
   position: relative;
 `;
 
-const ColorPicker = ({ label, color, setColor, colors }) => {
-
+const ColorPicker = ({
+  label, color, setColor, colors,
+}) => {
   const [displayColorPicker, setDisplayColorPicker] = useState(null);
 
   const handleClick = () => {
@@ -81,13 +82,15 @@ const ColorPicker = ({ label, color, setColor, colors }) => {
         <Swatch onClick={handleClick}>
           <Color color={color} />
         </Swatch>
-        {displayColorPicker ? <Popover>
-          <Cover onClick={handleClose} />
-          <SketchPicker presetColors={colors} color={color} onChange={handleChange} />
-        </Popover> : null}
+        {displayColorPicker ? (
+          <Popover>
+            <Cover onClick={handleClose} />
+            <SketchPicker presetColors={colors} color={color} onChange={handleChange} />
+          </Popover>
+        ) : null}
       </StyledDD>
     </StyledDL>
-  )
-}
+  );
+};
 
 export default ColorPicker;

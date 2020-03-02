@@ -1,7 +1,7 @@
-  import React from 'react';
-  import styled from 'styled-components';
+import React from 'react';
+import styled from 'styled-components';
 
-  const StyledSelect = styled.select`
+const StyledSelect = styled.select`
     display: inline-block;
     max-width: 100%;
     height: 34px;
@@ -30,7 +30,7 @@
   }
   `;
 
-  const StyledLabel = styled.label`
+const StyledLabel = styled.label`
   font-size: 14px;
   line-height: 1.5;
   color: #24292e;
@@ -38,33 +38,32 @@
   font-weight: 600;
   `;
 
-  const StyledDT = styled.dt`
+const StyledDT = styled.dt`
     margin: 0 0 6px;
     box-sizing: border-box;
   `;
 
-  const StyledDL = styled.dl`
+const StyledDL = styled.dl`
     margin: 15px 0;
     box-sizing: border-box;
   `;
 
 
-  const SelectField = ({ id, label, onChange, value, options }) => {
-    return (
-      <StyledDL>
-        <StyledDT>
-          <StyledLabel for={id}>{label}</StyledLabel>
-        </StyledDT>
-        <dd>
-          <StyledSelect value={value} id={id} onChange={onChange}>
-            {options.map(option => (
-              <option key={option.value} value={option.value}>{option.label}</option>
-            ))}
-          </StyledSelect>
-        </dd>
-      </StyledDL>
-    );
+const SelectField = ({
+  id, label, onChange, value, options,
+}) => (
+  <StyledDL>
+    <StyledDT>
+      <StyledLabel for={id}>{label}</StyledLabel>
+    </StyledDT>
+    <dd>
+      <StyledSelect value={value} id={id} onChange={onChange}>
+        {options.map((option) => (
+          <option key={option.value} value={option.value}>{option.label}</option>
+        ))}
+      </StyledSelect>
+    </dd>
+  </StyledDL>
+);
 
-  }
-
-  export { SelectField };
+export default SelectField;

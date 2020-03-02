@@ -19,40 +19,53 @@ const InputSectionTitle = styled.h2`
   padding: 24px 0;
 `;
 
-const InputSection = ({ title, children }) => {
-  return (
-    <div>
-      <InputSectionTitle>{title}</InputSectionTitle>
-      {children}
-      <hr />
-    </div>
-  )
-}
+const InputSection = ({ title, children }) => (
+  <div>
+    <InputSectionTitle>{title}</InputSectionTitle>
+    {children}
+    <hr />
+  </div>
+);
 
 const Input = ({
   snippet,
   setSnippet,
   logo,
-  setLogo, uploadedLogo, setUploadedLogo, title, titleFontSize, titleFontSizes, setTitleFontSize, setTitle, signature, setSignature, background, setBackground }) => {
-  return (
-    <Wrapper>
-      <InputSection title="Logo">
-        <LogoInput logo={logo} setLogo={setLogo} uploadedLogo={uploadedLogo} setUploadedLogo={setUploadedLogo} />
-      </InputSection>
-      <InputSection title="Title">
-        <TitleInput title={title} setTitle={setTitle} titleFontSize={titleFontSize} titleFontSizes={titleFontSizes} setTitleFontSize={setTitleFontSize} />
-      </InputSection>
-      <InputSection title="Snippet">
-        <SnippetInput snippet={snippet} setSnippet={setSnippet} />
-      </InputSection>
-      <InputSection title="Signature">
-        <SignatureInput signature={signature} setSignature={setSignature} />
-      </InputSection>
-      <InputSection title="Background">
-        <BackgroundInput background={background} setBackground={setBackground} />
-      </InputSection>
-    </Wrapper>
-  )
-};
+  setLogo,
+  uploadedLogo,
+  setUploadedLogo,
+  title,
+  titleFontSize,
+  titleFontSizes,
+  setTitleFontSize,
+  setTitle,
+  signature,
+  setSignature,
+  background,
+  setBackground,
+}) => (
+  <Wrapper>
+    <InputSection title="Logo">
+      <LogoInput
+        logo={logo}
+        setLogo={setLogo}
+        uploadedLogo={uploadedLogo}
+        setUploadedLogo={setUploadedLogo}
+      />
+    </InputSection>
+    <InputSection title="Title">
+      <TitleInput title={title} setTitle={setTitle} titleFontSize={titleFontSize} titleFontSizes={titleFontSizes} setTitleFontSize={setTitleFontSize} />
+    </InputSection>
+    <InputSection title="Snippet">
+      <SnippetInput snippet={snippet} setSnippet={setSnippet} />
+    </InputSection>
+    <InputSection title="Signature">
+      <SignatureInput signature={signature} setSignature={setSignature} />
+    </InputSection>
+    <InputSection title="Background">
+      <BackgroundInput background={background} setBackground={setBackground} />
+    </InputSection>
+  </Wrapper>
+);
 
 export default Input;
