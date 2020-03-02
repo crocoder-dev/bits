@@ -9,9 +9,8 @@ const Snippet = ({ language, snippet }) => {
     },
     [snippet, language],
   );
-  console.log(snippet);
   return (
-    <pre className="language-javascript" dangerouslySetInnerHTML={{__html: highlight}} />
+    <pre className={`language-${language}`} dangerouslySetInnerHTML={{__html: highlight}} />
   )
 };
 

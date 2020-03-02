@@ -1,4 +1,5 @@
 import React from 'react';
+import { InputField } from '../Input';
 
 const SignatureInput = ({ signature, setSignature }) => {
   const updateSignature = (event) => {
@@ -6,7 +7,7 @@ const SignatureInput = ({ signature, setSignature }) => {
   }
 
   return (
-    <input type="text" value={signature} onChange={updateSignature} />
+    <InputField label="Signature text" placeholder="Enter your twitter handle, website, etc." id="signature" value={signature} onChange={updateSignature} inputType="text" />
   )
 }
 

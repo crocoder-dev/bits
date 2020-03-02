@@ -24,7 +24,7 @@ const Popover = styled.div`
   position: absolute;
   z-index: 2;
 `;
-
+//bottom: 100%;
 const Cover = styled.div`
   position: fixed;
   top: 0px;
@@ -33,8 +33,30 @@ const Cover = styled.div`
   left: 0px;
 `;
 
-const ColorPicker = ({ color, setColor, colors }) => {
-  
+const StyledLabel = styled.label`
+font-size: 14px;
+line-height: 1.5;
+color: #24292e;
+background-color: #fff;
+font-weight: 600;
+`;
+
+const StyledDT = styled.dt`
+  margin: 0 0 6px;
+  box-sizing: border-box;
+`;
+
+const StyledDL = styled.dl`
+  margin: 15px 0;
+  box-sizing: border-box;
+`;
+
+const StyledDD = styled.dd`
+  position: relative;
+`;
+
+const ColorPicker = ({ label, color, setColor, colors }) => {
+
   const [displayColorPicker, setDisplayColorPicker] = useState(null);
 
   const handleClick = () => {
@@ -51,16 +73,20 @@ const ColorPicker = ({ color, setColor, colors }) => {
 
 
   return (
-    <div>
-      <Swatch onClick={ handleClick }>
-        <Color color={color} />
-      </Swatch>
-      { displayColorPicker ? <Popover>
-        <Cover onClick={ handleClose }/>
-        <SketchPicker presetColors={colors} color={color} onChange={ handleChange } />
-      </Popover> : null }
-
-    </div>
+    <StyledDL>
+      <StyledDT>
+        <StyledLabel>{label}</StyledLabel>
+      </StyledDT>
+      <StyledDD>
+        <Swatch onClick={handleClick}>
+          <Color color={color} />
+        </Swatch>
+        {displayColorPicker ? <Popover>
+          <Cover onClick={handleClose} />
+          <SketchPicker presetColors={colors} color={color} onChange={handleChange} />
+        </Popover> : null}
+      </StyledDD>
+    </StyledDL>
   )
 }
 

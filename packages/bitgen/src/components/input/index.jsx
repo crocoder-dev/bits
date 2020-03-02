@@ -29,14 +29,18 @@ const InputSection = ({ title, children }) => {
   )
 }
 
-const Input = ({ snippet, setSnippet, logo, setLogo, title, setTitle, signature, setSignature, background, setBackground }) => {
+const Input = ({
+  snippet,
+  setSnippet,
+  logo,
+  setLogo, uploadedLogo, setUploadedLogo, title, titleFontSize, titleFontSizes, setTitleFontSize, setTitle, signature, setSignature, background, setBackground }) => {
   return (
     <Wrapper>
       <InputSection title="Logo">
-        <LogoInput logo={logo} setLogo={setLogo}  />
+        <LogoInput logo={logo} setLogo={setLogo} uploadedLogo={uploadedLogo} setUploadedLogo={setUploadedLogo} />
       </InputSection>
       <InputSection title="Title">
-        <TitleInput title={title} setTitle={setTitle} />
+        <TitleInput title={title} setTitle={setTitle} titleFontSize={titleFontSize} titleFontSizes={titleFontSizes} setTitleFontSize={setTitleFontSize} />
       </InputSection>
       <InputSection title="Snippet">
         <SnippetInput snippet={snippet} setSnippet={setSnippet} />

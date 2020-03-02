@@ -1,4 +1,5 @@
 import React from 'react';
+import { InputField } from '../Input';
 
 const LogoInput = ({ logo, setLogo }) => {
   const getImage = (event) => {
@@ -12,12 +13,15 @@ const LogoInput = ({ logo, setLogo }) => {
       reader.readAsDataURL(file);
     }
   }
+  const linkImage = (event) => {
+    setLogo(event.target.value);
+  }
 
-  
+
   return (
     <>
-      <label for="logo">Logo:</label>
-      <input id="logo" type="file" onChange={getImage} />
+      <InputField label="Upload a logo" id="logo" inputType="file" onChange={getImage} />
+      <InputField label="Link it" placeholder="Paste an url here" id="logo" inputType="text" onChange={linkImage} />
     </>
   )
 }

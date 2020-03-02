@@ -16,6 +16,8 @@ const Output = ({
   logo,
   snippet,
   language,
+  titleFontSize,
+  titleColor,
 }) => {
 
   const capture = useRef(null);
@@ -24,8 +26,8 @@ const Output = ({
       const canvas = await html2canvas(capture.current);
       if (canvas.getContext) {    
         const image = new Image();
-        image.src = canvas.toDataURL("image/png");
-        const imageWindow = window.open("");
+        image.src = canvas.toDataURL('image/png');
+        const imageWindow = window.open('');
         imageWindow.document.write(image.outerHTML);
      }
     };
@@ -38,6 +40,8 @@ const Output = ({
           captureRef={capture}
           background={background}
           title={title}
+          titleColor={titleColor}
+          titleFontSize={titleFontSize}
           signature={signature}
           logo={logo}
           snippet={snippet}
