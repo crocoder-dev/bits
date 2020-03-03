@@ -18,6 +18,7 @@ const Output = ({
   language,
   titleFontSize,
   titleColor,
+  titleStyle,
 }) => {
   const capture = useRef(null);
 
@@ -41,6 +42,7 @@ const Output = ({
           title={title}
           titleColor={titleColor}
           titleFontSize={titleFontSize}
+          titleStyle={titleStyle}
           signature={signature}
           logo={logo}
           snippet={snippet}

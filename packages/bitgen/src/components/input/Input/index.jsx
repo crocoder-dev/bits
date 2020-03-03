@@ -11,7 +11,6 @@ const StyledLabel = styled.label`
 
 const StyledInput = styled.input`
     width: 440px;
-    max-width: 100%;
     margin-right: 5px;
     background-color: #fafbfc;
     padding: 6px 8px;

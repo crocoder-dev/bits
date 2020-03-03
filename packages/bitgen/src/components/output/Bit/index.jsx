@@ -58,11 +58,16 @@ const BitContainer = styled.div`
 `;
 
 const Bit = ({
-  title, signature, background, logo, snippet, language, captureRef, titleFontSize, titleColor,
+  title, signature, background, logo, snippet, language, captureRef, titleFontSize, titleColor, titleStyle,
 }) => (
   <BitContainer ref={captureRef} background={background}>
     <Logo logo={logo} />
-    <Title title={title} titleFontSize={titleFontSize} titleColor={titleColor} />
+    <Title
+      title={title}
+      titleFontSize={titleFontSize}
+      titleColor={titleColor}
+      titleStyle={titleStyle}
+    />
     <Snippet snippet={snippet} language={language} />
     <Signature signature={signature} />
   </BitContainer>

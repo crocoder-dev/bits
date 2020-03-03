@@ -39,10 +39,19 @@ const Input = ({
   titleFontSizes,
   setTitleFontSize,
   setTitle,
+  titleColor,
+  titleColors,
+  setTitleColor,
+  titleStyle,
+  setTitleStyle,
+  titleStyles,
   signature,
   setSignature,
   background,
   setBackground,
+  language,
+  languages,
+  setLanguage,
 }) => (
   <Wrapper>
     <InputSection title="Logo">
@@ -54,10 +63,28 @@ const Input = ({
       />
     </InputSection>
     <InputSection title="Title">
-      <TitleInput title={title} setTitle={setTitle} titleFontSize={titleFontSize} titleFontSizes={titleFontSizes} setTitleFontSize={setTitleFontSize} />
+      <TitleInput
+        title={title}
+        setTitle={setTitle}
+        titleFontSize={titleFontSize}
+        titleFontSizes={titleFontSizes}
+        setTitleFontSize={setTitleFontSize}
+        titleColor={titleColor}
+        titleColors={titleColors}
+        setTitleColor={setTitleColor}
+        titleStyle={titleStyle}
+        setTitleStyle={setTitleStyle}
+        titleStyles={titleStyles}
+      />
     </InputSection>
     <InputSection title="Snippet">
-      <SnippetInput snippet={snippet} setSnippet={setSnippet} />
+      <SnippetInput
+        snippet={snippet}
+        setSnippet={setSnippet}
+        language={language}
+        languages={languages}
+        setLanguage={setLanguage}
+      />
     </InputSection>
     <InputSection title="Signature">
       <SignatureInput signature={signature} setSignature={setSignature} />

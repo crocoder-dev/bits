@@ -28,7 +28,7 @@ const StyledSelect = styled.select`
     outline: none;
     box-shadow: inset 0 1px 2px rgba(27,31,35,.075), 0 0 0 0.2em rgba(3,102,214,.3);
   }
-  `;
+`;
 
 const StyledLabel = styled.label`
   font-size: 14px;
@@ -36,17 +36,17 @@ const StyledLabel = styled.label`
   color: #24292e;
   background-color: #fff;
   font-weight: 600;
-  `;
+`;
 
 const StyledDT = styled.dt`
     margin: 0 0 6px;
     box-sizing: border-box;
-  `;
+`;
 
 const StyledDL = styled.dl`
     margin: 15px 0;
     box-sizing: border-box;
-  `;
+`;
 
 
 const SelectField = ({

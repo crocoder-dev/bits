@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 const StyledTitle = styled.div`
   font-size: ${(props) => `${props.titleFontSize}px`};
+  text-align: center;
   color: ${(props) => props.titleColor};
 `;
 

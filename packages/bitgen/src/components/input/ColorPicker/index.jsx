@@ -12,12 +12,13 @@ const Swatch = styled.div`
 `;
 
 const Color = styled.div`
-  width: 36px;
-  height: 14px;
+  width: 43px;
+  height: 22px;
   border-radius: 2px;
   ${(props) => css`
     background-color: ${props.color};
   `}
+  border: 1px #000 solid;
 `;
 
 const Popover = styled.div`
