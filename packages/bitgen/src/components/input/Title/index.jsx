@@ -30,7 +30,7 @@ const TitleInput = ({
   return (
     <>
       <InputField label="Title text" placeholder="Enter something catchy" id="title" value={title} onChange={updateTitle} inputType="text" />
-      <div style={{ display: 'flex', justifyContent: 'space-between', maxWidth: '440px'}}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', maxWidth: '440px' }}>
         <SelectField id="test" label="Title font size" options={titleFontSizes} value={titleFontSize} onChange={updateFontSize} />
         <ColorPicker
           label="Title color"

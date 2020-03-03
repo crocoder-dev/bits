@@ -35,7 +35,7 @@ const Output = ({
   return (
     <Wrapper>
       <Background background={background}>
-        <button onClick={onButtonClick} />
+        <button type="button" onClick={onButtonClick}>A</button>
         <Bit
           captureRef={capture}
           background={background}
