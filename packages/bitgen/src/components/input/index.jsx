@@ -52,6 +52,12 @@ const Input = ({
   language,
   languages,
   setLanguage,
+  theme,
+  setTheme,
+  themes,
+  snippetFontSize,
+  setSnippetFontSize,
+  snippetFontSizes,
 }) => (
   <Wrapper>
     <InputSection title="Logo">
@@ -84,6 +90,12 @@ const Input = ({
         language={language}
         languages={languages}
         setLanguage={setLanguage}
+        theme={theme}
+        setTheme={setTheme}
+        themes={themes}
+        snippetFontSize={snippetFontSize}
+        setSnippetFontSize={setSnippetFontSize}
+        snippetFontSizes={snippetFontSizes}
       />
     </InputSection>
     <InputSection title="Signature">

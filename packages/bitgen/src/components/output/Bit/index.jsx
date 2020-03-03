@@ -5,6 +5,18 @@ import Title from '../Title';
 import Snippet from '../Snippet';
 import Signature from '../Signature';
 import okaidia from './okaidia';
+import defaultTheme from './default';
+
+export const themeStyles = {
+  default: {
+    label: 'Default',
+    css: defaultTheme,
+  },
+  okaidia: {
+    label: 'Okaidia',
+    css: okaidia,
+  },
+};
 
 const BitContainer = styled.div`
   height: 1080px;
@@ -18,7 +30,7 @@ const BitContainer = styled.div`
   ${(props) => css`
     background-color: ${props.background || 'red'};
   `}
-  ${okaidia}
+  ${(props) => themeStyles[props.theme].css}
 
   @media (min-width: 1920px) and (max-width: 2160px) {
     transform: translate(-5.55%, -5.55%) scale(0.888);
@@ -68,8 +80,10 @@ const Bit = ({
   titleFontSize,
   titleColor,
   titleStyle,
+  theme,
+  snippetFontSize,
 }) => (
-  <BitContainer ref={captureRef} background={background}>
+  <BitContainer ref={captureRef} theme={theme} background={background}>
     <Logo logo={logo} />
     <Title
       title={title}
@@ -77,7 +91,7 @@ const Bit = ({
       titleColor={titleColor}
       titleStyle={titleStyle}
     />
-    <Snippet snippet={snippet} language={language} />
+    <Snippet snippet={snippet} language={language} snippetFontSize={snippetFontSize} />
     <Signature signature={signature} />
   </BitContainer>
 );

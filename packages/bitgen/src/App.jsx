@@ -4,6 +4,7 @@ import Input from './components/input';
 import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
 import 'prismjs/plugins/command-line/prism-command-line.css';
 import { titleStyles } from './components/output/Title';
+import { themeStyles } from './components/output/Bit';
 
 const App = () => {
   const [snippet, setSnippet] = useState(`function abc() {
@@ -17,12 +18,26 @@ const App = () => {
   const [titleFontSize, setTitleFontSize] = useState('64');
   const [titleColor, setTitleColor] = useState('#FFF');
   const [titleStyle, setTitleStyle] = useState(undefined);
+  const [theme, setTheme] = useState('okaidia');
+  const [snippetFontSize, setSnippetFontSize] = useState('20');
 
   const [language, setLanguage] = useState('javascript');
 
 
   const titleColors = ['#FF6900', '#FCB900', '#7BDCB5', '#00D084', '#8ED1FC', '#0693E3', '#ABB8C3', '#EB144C', '#F78DA7', '#9900EF'];
   const backgroundColors = ['#FF6900', '#FCB900', '#7BDCB5', '#00D084', '#8ED1FC', '#0693E3', '#ABB8C3', '#EB144C', '#F78DA7', '#9900EF'];
+
+  const snippetFontSizes = [
+    { value: '14', label: '14px' },
+    { value: '16', label: '16px' },
+    { value: '18', label: '18px' },
+    { value: '20', label: '20px' },
+    { value: '22', label: '22px' },
+    { value: '24', label: '24px' },
+    { value: '26', label: '26px' },
+    { value: '28', label: '28px' },
+    { value: '30', label: '30px' },
+  ];
 
   const titleFontSizes = [
     { value: '24', label: '24px' },
@@ -68,6 +83,15 @@ const App = () => {
         language={language}
         languages={languages}
         setLanguage={setLanguage}
+        theme={theme}
+        setTheme={setTheme}
+        themes={
+          Object.entries(themeStyles)
+            .map((style) => ({ label: style[1].label, value: style[0] }))
+        }
+        snippetFontSize={snippetFontSize}
+        setSnippetFontSize={setSnippetFontSize}
+        snippetFontSizes={snippetFontSizes}
         signature={signature}
         setSignature={setSignature}
         background={background}
@@ -76,7 +100,9 @@ const App = () => {
       />
       <Output
         snippet={snippet}
+        snippetFontSize={snippetFontSize}
         language={language}
+        theme={theme}
         title={title}
         titleFontSize={titleFontSize}
         titleColor={titleColor}

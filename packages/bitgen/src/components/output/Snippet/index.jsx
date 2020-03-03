@@ -1,14 +1,23 @@
 import React, { useMemo } from 'react';
 import Prism from 'prismjs';
+import styled from 'styled-components';
+
+const StyledPre = styled.pre`
+  font-size: ${(props) => `${props.snippetFontSize}px !important`};
+`;
 
 
-const Snippet = ({ language, snippet }) => {
+const Snippet = ({ language, snippet, snippetFontSize }) => {
   const highlight = useMemo(
     () => Prism.highlight(snippet, Prism.languages[language], language),
     [snippet, language],
   );
   return (
-    <pre className={`language-${language}`} dangerouslySetInnerHTML={{ __html: highlight }} />
+    <StyledPre
+      snippetFontSize={snippetFontSize}
+      className={`language-${language}`}
+      dangerouslySetInnerHTML={{ __html: highlight }}
+    />
   );
 };
 

@@ -15,10 +15,12 @@ const Output = ({
   signature,
   logo,
   snippet,
+  theme,
   language,
   titleFontSize,
   titleColor,
   titleStyle,
+  snippetFontSize,
 }) => {
   const capture = useRef(null);
 
@@ -46,7 +48,9 @@ const Output = ({
           signature={signature}
           logo={logo}
           snippet={snippet}
+          snippetFontSize={snippetFontSize}
           language={language}
+          theme={theme}
         />
       </Background>
     </Wrapper>

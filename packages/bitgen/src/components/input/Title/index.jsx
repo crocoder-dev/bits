@@ -1,7 +1,14 @@
 import React from 'react';
+import styled from 'styled-components';
 import InputField from '../Input';
 import SelectField from '../Select';
 import ColorPicker from '../ColorPicker';
+
+const Wrapper = styled.div`
+display: flex;
+justify-content: space-between;
+max-width: 440px;
+`;
 
 const TitleInput = ({
   title,
@@ -30,7 +37,7 @@ const TitleInput = ({
   return (
     <>
       <InputField label="Title text" placeholder="Enter something catchy" id="title" value={title} onChange={updateTitle} inputType="text" />
-      <div style={{ display: 'flex', justifyContent: 'space-between', maxWidth: '440px' }}>
+      <Wrapper>
         <SelectField id="test" label="Title font size" options={titleFontSizes} value={titleFontSize} onChange={updateFontSize} />
         <ColorPicker
           label="Title color"
@@ -39,7 +46,7 @@ const TitleInput = ({
           colors={titleColors}
         />
         <SelectField id="test1" label="Title style" options={titleStyles} value={titleStyle} onChange={updateTitleStyle} />
-      </div>
+      </Wrapper>
     </>
   );
 };

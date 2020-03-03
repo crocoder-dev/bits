@@ -18,25 +18,67 @@ import 'ace-builds/src-noconflict/snippets/html';
 import 'ace-builds/src-noconflict/snippets/markdown';
 import 'ace-builds/src-noconflict/snippets/scss';
 import 'ace-builds/src-noconflict/snippets/typescript';
+import styled from 'styled-components';
+
 
 import SelectField from '../Select';
 
+const Wrapper = styled.div`
+display: flex;
+justify-content: space-between;
+max-width: 440px;
+`;
+
+
 const SnippetInput = ({
-  snippet, setSnippet, language, setLanguage, languages,
+  snippet,
+  setSnippet,
+  language,
+  setLanguage,
+  languages,
+  theme,
+  setTheme,
+  themes,
+  snippetFontSize,
+  setSnippetFontSize,
+  snippetFontSizes,
 }) => {
   const updateLanguage = (event) => {
     setLanguage(event.target.value);
   };
-  console.log(language);
+  const updateTheme = (event) => {
+    setTheme(event.target.value);
+  };
+  const updateFontSize = (event) => {
+    setSnippetFontSize(event.target.value);
+  };
+
+
   return (
     <>
-      <SelectField
-        id="lang"
-        label="Set language"
-        options={languages}
-        value={language}
-        onChange={updateLanguage}
-      />
+      <Wrapper>
+        <SelectField
+          id="lang"
+          label="Set language"
+          options={languages}
+          value={language}
+          onChange={updateLanguage}
+        />
+        <SelectField
+          id="theme"
+          label="Set theme"
+          options={themes}
+          value={theme}
+          onChange={updateTheme}
+        />
+        <SelectField
+          id="snippet-font"
+          label="Code font size"
+          options={snippetFontSizes}
+          value={snippetFontSize}
+          onChange={updateFontSize}
+        />
+      </Wrapper>
       <AceEditor
         placeholder="Placeholder Text"
         mode={language}
