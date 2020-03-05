@@ -4,6 +4,8 @@ import styled from 'styled-components';
 
 const StyledPre = styled.pre`
   font-size: ${(props) => `${props.snippetFontSize}px !important`};
+  width: 80%;
+  overflow: hidden !important;
 `;
 
 

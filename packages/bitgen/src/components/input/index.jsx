@@ -64,6 +64,9 @@ const Input = ({
   signatureColor,
   signatureColors,
   setSignatureColor,
+  logoWidth,
+  logoWidths,
+  setLogoWidth,
 }) => (
   <Wrapper>
     <InputSection title="Logo">
@@ -72,6 +75,9 @@ const Input = ({
         setLogo={setLogo}
         uploadedLogo={uploadedLogo}
         setUploadedLogo={setUploadedLogo}
+        logoWidth={logoWidth}
+        logoWidths={logoWidths}
+        setLogoWidth={setLogoWidth}
       />
     </InputSection>
     <InputSection title="Title">

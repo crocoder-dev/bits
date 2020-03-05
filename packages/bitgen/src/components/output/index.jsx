@@ -14,6 +14,7 @@ const Output = ({
   title,
   signature,
   logo,
+  logoWidth,
   snippet,
   theme,
   language,
@@ -57,6 +58,7 @@ const Output = ({
           theme={theme}
           signatureColor={signatureColor}
           signatureFontSize={signatureFontSize}
+          logoWidth={logoWidth}
         />
       </Background>
     </Wrapper>

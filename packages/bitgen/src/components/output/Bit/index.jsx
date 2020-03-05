@@ -25,7 +25,6 @@ const BitContainer = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  border: 1px #000 dashed;
   box-sizing: border-box;
   ${(props) => css`
     background-color: ${props.background || 'red'};
@@ -84,9 +83,10 @@ const Bit = ({
   snippetFontSize,
   signatureColor,
   signatureFontSize,
+  logoWidth,
 }) => (
   <BitContainer ref={captureRef} theme={theme} background={background}>
-    <Logo logo={logo} />
+    <Logo logo={logo} logoWidth={logoWidth} />
     <Title
       title={title}
       titleFontSize={titleFontSize}
