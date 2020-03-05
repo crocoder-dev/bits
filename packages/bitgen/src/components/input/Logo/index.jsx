@@ -13,8 +13,14 @@ const LogoInput = ({ setLogo }) => {
       reader.readAsDataURL(file);
     }
   };
-  const linkImage = (event) => {
-    setLogo(event.target.value);
+  const linkImage = async (event) => {
+    const response = await fetch(event.target.value);
+    const blob = await response.blob();
+    const reader = new FileReader();
+    reader.readAsDataURL(blob);
+    reader.addEventListener('load', () => {
+      setLogo(reader.result);
+    }, false);
   };
 
 
