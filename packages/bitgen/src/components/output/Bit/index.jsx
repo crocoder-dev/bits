@@ -82,6 +82,8 @@ const Bit = ({
   titleStyle,
   theme,
   snippetFontSize,
+  signatureColor,
+  signatureFontSize,
 }) => (
   <BitContainer ref={captureRef} theme={theme} background={background}>
     <Logo logo={logo} />
@@ -92,7 +94,11 @@ const Bit = ({
       titleStyle={titleStyle}
     />
     <Snippet snippet={snippet} language={language} snippetFontSize={snippetFontSize} />
-    <Signature signature={signature} />
+    <Signature
+      signature={signature}
+      signatureColor={signatureColor}
+      signatureFontSize={signatureFontSize}
+    />
   </BitContainer>
 );
 

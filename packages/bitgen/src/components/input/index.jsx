@@ -58,6 +58,12 @@ const Input = ({
   snippetFontSize,
   setSnippetFontSize,
   snippetFontSizes,
+  signatureFontSize,
+  signatureFontSizes,
+  setSignatureFontSize,
+  signatureColor,
+  signatureColors,
+  setSignatureColor,
 }) => (
   <Wrapper>
     <InputSection title="Logo">
@@ -99,7 +105,16 @@ const Input = ({
       />
     </InputSection>
     <InputSection title="Signature">
-      <SignatureInput signature={signature} setSignature={setSignature} />
+      <SignatureInput
+        signature={signature}
+        setSignature={setSignature}
+        signatureFontSize={signatureFontSize}
+        signatureFontSizes={signatureFontSizes}
+        setSignatureFontSize={setSignatureFontSize}
+        signatureColor={signatureColor}
+        signatureColors={signatureColors}
+        setSignatureColor={setSignatureColor}
+      />
     </InputSection>
     <InputSection title="Background">
       <BackgroundInput background={background} setBackground={setBackground} />

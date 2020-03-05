@@ -1,9 +1,19 @@
 import React from 'react';
+import styled from 'styled-components';
 
-const Signature = ({ signature }) => (
-  <div>
+const StyledSignature = styled.div`
+  color: ${(props) => props.signatureColor};
+  font-size: ${(props) => props.signatureFontSize}px;
+`;
+
+const Signature = ({
+  signature,
+  signatureColor,
+  signatureFontSize,
+}) => (
+  <StyledSignature signatureColor={signatureColor} signatureFontSize={signatureFontSize}>
     {signature}
-  </div>
+  </StyledSignature>
 );
 
 export default Signature;

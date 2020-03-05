@@ -7,25 +7,49 @@ import { titleStyles } from './components/output/Title';
 import { themeStyles } from './components/output/Bit';
 
 const App = () => {
-  const [snippet, setSnippet] = useState(`function abc() {
-  return 'a';
-}`);
+  const [snippet, setSnippet] = useState(`<!DOCTYPE HTML>
+  <html>
+
+  <body>
+
+    <script>
+      alert( 'Hello, JS!' );
+    </script>
+
+  </body>
+
+  </html>`);
   const [logo, setLogo] = useState('/logo.png');
   const [uploadedLogo, setUploadedLogo] = useState(false);
-  const [title, setTitle] = useState('Calculate the product of two numbers');
-  const [signature, setSignature] = useState('🐦 @devabram 🌐 devabram.com');
+  const [title, setTitle] = useState('Hello, JS');
+  const [signature, setSignature] = useState('crocoder.dev @crocoderdev');
   const [background, setBackground] = useState('#000');
-  const [titleFontSize, setTitleFontSize] = useState('64');
+  const [titleFontSize, setTitleFontSize] = useState('128');
   const [titleColor, setTitleColor] = useState('#FFF');
   const [titleStyle, setTitleStyle] = useState(undefined);
   const [theme, setTheme] = useState('okaidia');
-  const [snippetFontSize, setSnippetFontSize] = useState('20');
+  const [snippetFontSize, setSnippetFontSize] = useState('26');
+  const [signatureFontSize, setSignatureFontSize] = useState('20');
+  const [signatureColor, setSignatureColor] = useState('#FFF');
 
-  const [language, setLanguage] = useState('javascript');
+  const [language, setLanguage] = useState('html');
 
 
   const titleColors = ['#FF6900', '#FCB900', '#7BDCB5', '#00D084', '#8ED1FC', '#0693E3', '#ABB8C3', '#EB144C', '#F78DA7', '#9900EF'];
+  const signatureColors = ['#FF6900', '#FCB900', '#7BDCB5', '#00D084', '#8ED1FC', '#0693E3', '#ABB8C3', '#EB144C', '#F78DA7', '#9900EF'];
   const backgroundColors = ['#FF6900', '#FCB900', '#7BDCB5', '#00D084', '#8ED1FC', '#0693E3', '#ABB8C3', '#EB144C', '#F78DA7', '#9900EF'];
+
+  const signatureFontSizes = [
+    { value: '14', label: '14px' },
+    { value: '16', label: '16px' },
+    { value: '18', label: '18px' },
+    { value: '20', label: '20px' },
+    { value: '22', label: '22px' },
+    { value: '24', label: '24px' },
+    { value: '26', label: '26px' },
+    { value: '28', label: '28px' },
+    { value: '30', label: '30px' },
+  ];
 
   const snippetFontSizes = [
     { value: '14', label: '14px' },
@@ -94,6 +118,12 @@ const App = () => {
         snippetFontSizes={snippetFontSizes}
         signature={signature}
         setSignature={setSignature}
+        signatureFontSize={signatureFontSize}
+        signatureFontSizes={signatureFontSizes}
+        setSignatureFontSize={setSignatureFontSize}
+        signatureColor={signatureColor}
+        signatureColors={signatureColors}
+        setSignatureColor={setSignatureColor}
         background={background}
         setBackground={setBackground}
         backgroundColors={backgroundColors}
@@ -109,6 +139,8 @@ const App = () => {
         titleStyle={titleStyle}
         background={background}
         signature={signature}
+        signatureColor={signatureColor}
+        signatureFontSize={signatureFontSize}
         logo={logo}
       />
     </div>

@@ -21,16 +21,20 @@ const Output = ({
   titleColor,
   titleStyle,
   snippetFontSize,
+  signatureColor,
+  signatureFontSize,
 }) => {
   const capture = useRef(null);
 
   const onButtonClick = async () => {
     const canvas = await html2canvas(capture.current);
     if (canvas.getContext) {
-      const image = new Image();
-      image.src = canvas.toDataURL('image/png');
+      const anchor = document.createElement('a');
+      anchor.appendChild(document.createTextNode('download'));
+      anchor.href = canvas.toDataURL('image/png');
+      anchor.download = 'bit.png';
       const imageWindow = window.open('');
-      imageWindow.document.write(image.outerHTML);
+      imageWindow.document.write(anchor.outerHTML);
     }
   };
 
@@ -51,6 +55,8 @@ const Output = ({
           snippetFontSize={snippetFontSize}
           language={language}
           theme={theme}
+          signatureColor={signatureColor}
+          signatureFontSize={signatureFontSize}
         />
       </Background>
     </Wrapper>
