@@ -4,6 +4,8 @@ import styled from 'styled-components';
 const StyledSignature = styled.div`
   color: ${(props) => props.signatureColor};
   font-size: ${(props) => props.signatureFontSize}px;
+  max-width: 80%;
+  overflow: hidden;
 `;
 
 const Signature = ({
