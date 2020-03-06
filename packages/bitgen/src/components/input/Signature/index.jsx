@@ -33,6 +33,7 @@ const SignatureInput = ({
       <Wrapper>
         <SelectField id="signature-font" label="Signature font size" options={signatureFontSizes} value={signatureFontSize} onChange={updateSignatureFontSize} />
         <ColorPicker
+          top
           label="Signature color"
           setColor={setSignatureColor}
           color={signatureColor}

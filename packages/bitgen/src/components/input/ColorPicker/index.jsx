@@ -9,6 +9,7 @@ const Swatch = styled.div`
   box-shadow: 0 0 0 1px rgba(0,0,0,.1);
   display: inline-block;
   cursor: pointer;
+  position:relative;
 `;
 
 const Color = styled.div`
@@ -23,6 +24,7 @@ const Color = styled.div`
 
 const Popover = styled.div`
   position: absolute;
+  ${(props) => (props.top ? 'bottom: 40px' : '')};
   z-index: 2;
 `;
 // bottom: 100%;
@@ -57,7 +59,11 @@ const StyledDD = styled.dd`
 `;
 
 const ColorPicker = ({
-  label, color, setColor, colors,
+  label,
+  color,
+  setColor,
+  colors,
+  top,
 }) => {
   const [displayColorPicker, setDisplayColorPicker] = useState(null);
 
@@ -84,7 +90,7 @@ const ColorPicker = ({
           <Color color={color} />
         </Swatch>
         {displayColorPicker ? (
-          <Popover>
+          <Popover top={top}>
             <Cover onClick={handleClose} />
             <SketchPicker presetColors={colors} color={color} onChange={handleChange} />
           </Popover>

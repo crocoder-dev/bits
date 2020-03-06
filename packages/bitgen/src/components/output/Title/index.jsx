@@ -5,6 +5,7 @@ const StyledTitle = styled.div`
   font-size: ${(props) => `${props.titleFontSize}px`};
   text-align: center;
   color: ${(props) => props.titleColor};
+  font-family: 'Rubik', sans-serif;
 `;
 
 const Neon = styled(StyledTitle)`

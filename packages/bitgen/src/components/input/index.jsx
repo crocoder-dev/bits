@@ -12,6 +12,7 @@ const Wrapper = styled.section`
   overflow-y: scroll;
   padding: 24px;
   box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
 `;
 
 const InputSectionTitle = styled.h2`
@@ -69,6 +70,9 @@ const Input = ({
   setLogoWidth,
 }) => (
   <Wrapper>
+    <InputSection title="Background">
+      <BackgroundInput background={background} setBackground={setBackground} />
+    </InputSection>
     <InputSection title="Logo">
       <LogoInput
         logo={logo}
@@ -121,9 +125,6 @@ const Input = ({
         signatureColors={signatureColors}
         setSignatureColor={setSignatureColor}
       />
-    </InputSection>
-    <InputSection title="Background">
-      <BackgroundInput background={background} setBackground={setBackground} />
     </InputSection>
   </Wrapper>
 );
